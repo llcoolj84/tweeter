@@ -1,0 +1,42 @@
+    section {
+
+        border: 1px solid #D3D3D3;
+        border-radius: 10px;
+        border-size: 150%;
+        box-sizing: border-box;
+        width: 450px;
+        height: 275px;
+
+
+        /*padding: 20px;*/
+    }
+
+
+    .new-tweet {
+        color: #31525b;
+    }
+
+    .new-tweet h2 {
+        display: block;
+        border-bottom: 2px solid black;
+        width: 94%;
+        margin-left: 3%;
+        text-align: left;
+        padding-top: 0.5em;
+        padding-left: 3%;
+    }
+
+    textarea {
+        width: 94%;
+    }
+
+    .counter {
+        margin-left: -4%;
+        /*position: fixed;*/
+    }
+
+    input {
+        margin-right: 78%;
+        margin-bottom: 0.5em;
+        margin-left: -2%;
+    }

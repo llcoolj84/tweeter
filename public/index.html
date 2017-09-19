@@ -6,14 +6,19 @@
     <title>Tweeter - Home Page</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav-bar.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="/script/app.js">
+    </script>
+    <script src="https://use.fontawesome.com/b8994bec03.js"></script>
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/app.js"></script>
+    <script type="text/javascript" src="/scripts/compost-char-counter.js"></script>
 </head>
 
 <body>
@@ -24,13 +29,34 @@
     </nav>
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <p>You know? Dealing with soft targets, and it's just strafing runs in my underwear before my first cup of coffee because I don't have time for these clowns. I don't have time for their judgment and their stupidity and .... (sighs)
-        </p>
-        <p>And people say, 'Oh, you know... you have to work through your resentments.' Yeah. No. I'm gonna hold on to them and they're gonna fuel my attack.
-        </p>
-        <p>Because ... look at what I'm dealing with, man. I'm dealing with fools and trolls.
-        </p>
-        <p>How complicated can it be? What they're not ready for, is guys like you and I, Nails, and all the other gnarly gnarlingtons in my life ... that we are high priests ... Vatican assassin warlocks. Boom. Print that, people. See where that goes.</p>
+        <!-- the main form for adding tweets -->
+        <section class="new-tweet">
+            <h2>Compose Tweet</h2>
+            <form method="POST" action="/tweets/">
+                <textarea input type="text" name="text" placeholder="What are you humming about?"></textarea>
+                <input type="submit" value="Tweet">
+                <span class="counter">140</span>
+            </form>
+        </section>
+        <br>
+        <article id="all-tweets">
+            <br>
+            <header>
+                <img class="avatar-img" src="/images/brown-avatar.png">
+                <h2 class="tweet-title">Bill Fields</h2>
+                <img class="user-avatar" src="#">
+                <span class="username">@MrFields</span>
+            </header>
+            <p class="tweet">Little Tweet Here</p>
+            <p class="lower-tweet-border"></p>
+            <footer>
+                <div class="date-posted">10 days ago</div>
+                <a href="#" class="fa fa-heart"></a>
+                <a href="#" class="fa fa-retweet"></a>
+                <a href="#" class="fa fa-flag"></a>
+            </footer>
+            <br>
+        </article>
     </main>
 </body>
 

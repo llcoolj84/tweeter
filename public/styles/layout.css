@@ -18,41 +18,14 @@ html {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
  * Global layout stuff
  */
 
 body {
     margin: 0;
-    color: #e8fdff;
     background-color: #eee;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 main {
@@ -67,9 +40,20 @@ main {
     padding-top: 80px;
 }
 
+
+
+
+/*main form .placeholder {
+    color: blue;
+}*/
+
 p {
     color: black;
 }
+
+
+
+
 
 
 

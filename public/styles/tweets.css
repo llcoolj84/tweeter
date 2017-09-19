@@ -1,0 +1,111 @@
+article {
+
+    border: 1px solid #D3D3D3;
+    border-radius: 10px;
+    line-height: 5%;
+    overflow: hidden;
+    border-size: 150%;
+    box-sizing: border-box;
+    width: 450px;
+    height: 275px;
+    opacity: 0.80;
+
+
+    /*padding: 20px;*/
+}
+
+#all-tweets .tweet-title {
+    float: left;
+    margin-left: 5px;
+    position: relative;
+    bottom: 35px;
+}
+
+#all-tweets h2 {
+
+    font-size: 2em;
+
+    float: left;
+    padding-left: 10px;
+    height: 50px;
+    color: #31525b;
+}
+
+#all-tweets header {
+    background-color: #F6F6F6;
+    line-height: 5em;
+    color: #e8fdff;
+    padding-top: 2%;
+}
+
+#all-tweets .avatar-img {
+    height: 60px;
+    width: 60px;
+    float: left;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+.username {
+    margin-left: 38%;
+    float: left;
+    position: relative;
+    bottom: 10px;
+    color: #8D8D8D;
+}
+
+.tweet {
+
+    /*margin-bottom: 0.5em;*/
+    font-size: 1.5em;
+    margin-right: 55%;
+    margin-top: 15%;
+    margin-bottom: -5%;
+    /*text-align: left;*/
+}
+
+.date-posted {
+    padding-top: 5px;
+    margin: 0;
+}
+
+.lower-tweet-border {
+    margin-top: 20%;
+    border: 0.5px solid #EBEBEB;
+    margin-bottom: 5px margin-top: 5px;
+}
+
+article footer {
+
+    margin-left: -80%;
+    height: 30px;
+}
+
+article footer a {
+    color: #00a087;
+    height: 20px;
+    width: 20px;
+    float: right;
+    position: relative;
+    right: 30px;
+    bottom: 10px;
+    padding-right: 2px;
+    padding-left: 1.5em;
+    /*visibility: hidden;*/
+    opacity: 0;
+    text-decoration: none;
+}
+
+article:hover {
+
+    transition: opacity .25s ease-in-out;
+    opacity: 1;
+    /*visibility: visible;*/
+}
+
+article:hover footer a {
+    transition: opacity .25s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
