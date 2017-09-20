@@ -18,6 +18,7 @@ html {
 
 
 
+
 /*
  * Global layout stuff
  */
@@ -28,7 +29,7 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-main {
+body .container {
     position: static;
     width: 450px;
     height: 10%;
@@ -42,7 +43,6 @@ main {
 
 
 
-
 /*main form .placeholder {
     color: blue;
 }*/
@@ -50,71 +50,6 @@ main {
 p {
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

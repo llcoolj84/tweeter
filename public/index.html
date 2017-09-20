@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
@@ -11,14 +10,12 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav-bar.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
-    <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="/script/app.js">
-    </script>
+    <script src="/scripts/compost-char-counter.js" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/b8994bec03.js"></script>
+    <!-- External JS -->
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/compost-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/app.js"></script>
 </head>
 
 <body>
@@ -29,34 +26,18 @@
     </nav>
     <!-- Page-specific (main) content here -->
     <main class="container">
-        <!-- the main form for adding tweets -->
         <section class="new-tweet">
             <h2>Compose Tweet</h2>
-            <form method="POST" action="/tweets/">
-                <textarea input type="text" name="text" placeholder="What are you humming about?"></textarea>
+            <form action="/tweets/" method="POST">
+                <textarea name="text" placeholder="What are you humming about?"></textarea>
                 <input type="submit" value="Tweet">
                 <span class="counter">140</span>
             </form>
         </section>
-        <br>
-        <article id="all-tweets">
-            <br>
-            <header>
-                <img class="avatar-img" src="/images/brown-avatar.png">
-                <h2 class="tweet-title">Bill Fields</h2>
-                <img class="user-avatar" src="#">
-                <span class="username">@MrFields</span>
-            </header>
-            <p class="tweet">Little Tweet Here</p>
-            <p class="lower-tweet-border"></p>
-            <footer>
-                <div class="date-posted">10 days ago</div>
-                <a href="#" class="fa fa-heart"></a>
-                <a href="#" class="fa fa-retweet"></a>
-                <a href="#" class="fa fa-flag"></a>
-            </footer>
-            <br>
-        </article>
+        <div id="wrap">
+            <section id="tweets-container" class="all-tweets">
+            </section>
+        </div>
     </main>
 </body>
 

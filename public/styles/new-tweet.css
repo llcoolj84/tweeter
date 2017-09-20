@@ -1,42 +1,124 @@
-    section {
+.new-tweet {
 
-        border: 1px solid #D3D3D3;
-        border-radius: 10px;
-        border-size: 150%;
-        box-sizing: border-box;
-        width: 450px;
-        height: 275px;
+    background-color: #F3F3F3;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #a8a8a8;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 3%;
+}
+
+.new-tweet h2 {
+
+    width: 94%;
+    text-align: left;
+    padding-top: 0.5em;
+    margin-left: 3%;
+    border-bottom: 1px solid black;
+}
+
+textarea {
+
+    width: 94%;
+}
+
+.counter {
+
+    margin-left: -7.5%;
+}
+
+input {
+    margin-right: 78.5%;
+    margin-bottom: 0.5em;
+}
+
+.tweet {
+    margin-top: 2em;
+    overflow: hidden;
+    border-radius: 7px;
+    border-style: solid;
+    border-color: #a8a8a8;
+    /*margin: auto;*/
+    margin-right: 2em;
+    margin-left: 2em;
+    /*width: 90%;*/
+    color: #333333;
+    opacity: 0.8;
+    transition: opacity 0.2s linear;
+}
+
+.tweet:hover {
+    opacity: 1;
+}
+
+.user-handle {
+
+    float: right;
+    margin-top: -13%;
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 70%;
+}
+
+.user-avatar {
+
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 85%;
+    margin-top: 1%;
+    height: 60px;
+    width: 60px;
+}
+
+.tweet-content {
+
+    /*margin-right: 5%;*/
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tweet h1 {
+
+    margin-top: -12%;
+    margin-right: 25%;
+    font-size: 1.6em;
+}
+
+.tweet-timestamp {
+
+    display: inline-block;
+    margin-left: -45%;
+}
+
+.tweet:hover .tweet-actions {
+    opacity: 1;
+    transition: opacity 0.2s linear;
+}
 
 
-        /*padding: 20px;*/
-    }
 
+.tweet-actions {
+    float: right;
+    color: #00a087;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
 
-    .new-tweet {
-        color: #31525b;
-    }
+.tweet-actions i {
 
-    .new-tweet h2 {
-        display: block;
-        border-bottom: 2px solid black;
-        width: 94%;
-        margin-left: 3%;
-        text-align: left;
-        padding-top: 0.5em;
-        padding-left: 3%;
-    }
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
 
-    textarea {
-        width: 94%;
-    }
+.tweet-header {
+    padding: 1%;
+    background-color: #eee;
+}
 
-    .counter {
-        margin-left: -4%;
-        /*position: fixed;*/
-    }
-
-    input {
-        margin-right: 78%;
-        margin-bottom: 0.5em;
-        margin-left: -2%;
-    }
+.tweet-footer {
+    border-top: .5px solid grey;
+    padding: 0.5em;
+}
