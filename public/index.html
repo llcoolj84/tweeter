@@ -3,6 +3,7 @@
 
 <head>
     <title>Tweeter - Home Page</title>
+    <meta charset="UTF-8">
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav-bar.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
     <script src="/scripts/compost-char-counter.js" type="text/javascript"></script>
     <script src="https://use.fontawesome.com/b8994bec03.js"></script>
@@ -33,9 +35,18 @@
                 <input type="submit" value="Tweet">
                 <span class="counter">140</span>
             </form>
+            <script>
+            document.querySelector(".container form").addEventListener("submit",
+                function(event) {
+                    alert("preventDefault will stop you from checking this checkbox!")
+                    alert($(this).serialize());
+                    event.preventDefault();
+                }, false);
+            </script>
         </section>
         <div id="wrap">
             <section id="tweets-container" class="all-tweets">
+                <!-- tweet container -->
             </section>
         </div>
     </main>
