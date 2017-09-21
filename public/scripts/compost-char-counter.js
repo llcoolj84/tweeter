@@ -5,11 +5,7 @@
 
 
        $('textarea').keyup(function() {
-
-
-
-           let maxLength = 140;
-           let left = 140 - $(this).val().length;
+           var left = 140 - $(this).val().length;
 
            $('.counter').text(left);
 

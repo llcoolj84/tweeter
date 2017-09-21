@@ -122,3 +122,8 @@ input {
     border-top: .5px solid grey;
     padding: 0.5em;
 }
+
+#status-area .flash_message {
+    padding: 5px;
+    color: green;
+}
