@@ -79,6 +79,7 @@ input {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+    word-wrap: break-word;
 }
 
 .tweet h1 {
@@ -98,8 +99,6 @@ input {
     opacity: 1;
     transition: opacity 0.2s linear;
 }
-
-
 
 .tweet-actions {
     float: right;

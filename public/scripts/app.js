@@ -1,5 +1,6 @@
 $(function() {
 
+    //form validation and post function when "tweet" button pressed
 
     $("form").submit(function(event) { //serialize input into string obj NOT JSON
 
@@ -13,7 +14,6 @@ $(function() {
         if (x > 140) {
             alert("Can't submit a tweet longer than 140 characters")
         } else {
-
             var tweetString = $("form").serialize();
             $.ajax({
                 method: 'POST',
@@ -25,12 +25,11 @@ $(function() {
                     loadTweets();
                 }
             })
-
             $("#tweet-input").val('');
         }
-
     })
 
+    //jquery create new tweet element
 
     function createTweetElement(tweet) {
 
@@ -60,13 +59,16 @@ $(function() {
 
     }
 
+    // render tweets and prepend them in tweet's container
+
     function renderTweets(tweets) {
         tweets.forEach(function(eachT) {
             let $tweet = createTweetElement(eachT);
             $('#tweets-container').prepend($tweet);
-
         });
     }
+
+    //get request to load tweets into memory ready to be rendered
 
     function loadTweets() {
         $.ajax({
@@ -93,10 +95,7 @@ $(function() {
         }
     });
 
-
-
     loadTweets();
 
     renderTweets(tweetData);
-
 });
