@@ -8,6 +8,7 @@
     text-align: center;
     margin: auto;
     margin-bottom: 3%;
+    display: none;
 }
 
 .new-tweet h2 {

@@ -81,6 +81,18 @@ $(function() {
         });
     }
 
+    //slide down toggle to add compose tweet container
+    $('.compose').on("click", function(event) {
+        event.preventDefault()
+        if ($(".new-tweet").is(":hidden")) {
+            $(".new-tweet").slideDown("slow");
+            //focus on that text area
+            $('#tweet-input').focus();
+        } else {
+            $(".new-tweet").slideUp("slow");
+        }
+    });
+
 
 
     loadTweets();
