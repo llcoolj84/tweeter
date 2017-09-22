@@ -6,7 +6,7 @@ $(function() {
 
         event.preventDefault();
 
-        var x;
+        let x;
         x = $("#tweet-input").val().length;
         if (x === 0) {
             alert("Can not post blank tweets");
@@ -14,7 +14,7 @@ $(function() {
         if (x > 140) {
             alert("Can't submit a tweet longer than 140 characters")
         } else {
-            var tweetString = $("form").serialize();
+            let tweetString = $("form").serialize();
             $.ajax({
                 method: 'POST',
                 url: '/tweets',
@@ -31,7 +31,7 @@ $(function() {
 
     //slide down toggle to add compose tweet container
 
-    $('.compose').on("click", function(event) {
+    $('.button').on("click", function(event) {
         event.preventDefault()
         if ($(".new-tweet").is(":hidden")) {
             $(".new-tweet").slideDown("slow");
@@ -46,27 +46,27 @@ $(function() {
 
     function createTweetElement(tweet) {
 
-        var $article = $("<article>").addClass("tweet")
+        let $article = $("<article>").addClass("tweet")
 
-        var $header = $("<header>").addClass("tweet-header")
+        let $header = $("<header>").addClass("tweet-header")
             .append($("<img>").addClass("user-avatar").attr("src", tweet.user.avatars.small))
             .append($("<h1>").addClass("user-name").text(tweet.user.name))
             .append($("<span>").addClass("user-handle").text(tweet.user.handle))
 
-        var $main = $("<main>").addClass("tweet-content")
+        let $main = $("<main>").addClass("tweet-content")
             .append($("<div>").addClass("tweet-content").text(tweet.content.text))
 
-        var $icons = $("<div>").addClass("tweet-actions")
+        let $icons = $("<div>").addClass("tweet-actions")
             .append($("<i>").addClass("fa fa-flag"))
             .append($("<i>").addClass("fa fa-retweet"))
             .append($("<i>").addClass("fa fa-heart"))
 
-        var $footer = $("<footer>").addClass("tweet-footer")
-            .append($("<div>").addClass("tweet-timestamp").text(tweet.created_at))
+        let $footer = $("<footer>").addClass("tweet-footer")
+            .append($("<div>").addClass("tweet-timestamp").text(moment(tweet.created_at).fromNow()))
             .append($("<div>").addClass("tweet-actions"))
             .append($icons);
 
-        var $combine = $article.append($header).append($main).append($icons).append($footer);
+        let $combine = $article.append($header).append($main).append($icons).append($footer);
 
         return $combine;
 
@@ -80,8 +80,8 @@ $(function() {
             url: '/tweets',
             method: 'GET',
             success: function(data) {
-                var arr = data[data.length - 1];
-                var $newTweet = createTweetElement(arr);
+                let arr = data[data.length - 1];
+                let $newTweet = createTweetElement(arr);
                 $('#tweets-container').prepend($newTweet);
             }
         });
@@ -91,7 +91,6 @@ $(function() {
 
     function renderTweets() {
 
-        console.log('HERE!');
         $.ajax({
             url: '/tweets',
             method: 'GET',

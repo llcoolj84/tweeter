@@ -2,10 +2,11 @@
 
 .new-tweet {
 
-    background-color: #F3F3F3;
+    background: linear-gradient(to right, #33ccff 0%, #0099ff 100%);
+
     border-radius: 6px;
     border-style: solid;
-    border-color: #a8a8a8;
+    border-color: #f5fdff;
     width: 90%;
     text-align: center;
     margin: auto;
@@ -19,7 +20,8 @@
     text-align: left;
     padding-top: 0.5em;
     margin-left: 3%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
+    color: white;
 }
 
 textarea {
@@ -30,19 +32,23 @@ textarea {
 .counter {
 
     margin-left: -7.5%;
+    color: white;
 }
 
 input {
     margin-right: 78.5%;
     margin-bottom: 0.5em;
+    background-color: white;
+    color: black;
+    border: 2px solid #0099ff;
 }
 
 .tweet {
     margin-top: 2em;
     overflow: hidden;
-    border-radius: 7px;
+    border-radius: 5px;
     border-style: solid;
-    border-color: #a8a8a8;
+    border-color: #e5ebeb;
     /*margin: auto;*/
     margin-right: 2em;
     margin-left: 2em;
@@ -108,7 +114,7 @@ input {
 .tweet-actions {
     float: right;
     padding-top: 3px;
-    color: #00a087;
+    color: #0099ff;
     opacity: 0;
     transition: opacity 0.2s linear;
 }
@@ -121,7 +127,7 @@ input {
 
 .tweet-header {
     padding: 1%;
-    background-color: #eee;
+    background-color: #f3fafa;
 }
 
 .tweet-footer {

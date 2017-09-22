@@ -1,17 +1,18 @@
 #nav-bar {
     position: fixed;
-    background-color: #00a087;
-    height: 80px;
+    /*background-color: #010f57;*/
+    background: linear-gradient(to right, #33ccff 0%, #0099ff 100%);
+    height: 90px;
     width: 100%;
     color: #e8fdff;
-    padding-left: 2em;
+    padding-left: 1em;
     padding-right: 2em;
     z-index: 999;
 }
 
 #nav-bar .logo {
-    height: 80px;
-    width: 80px;
+    height: 85px;
+    width: 125px;
     float: left;
 }
 
@@ -22,38 +23,6 @@
     padding-left: 10px;
 }
 
-.compose {
-
-
-    background-color: #DAF7A6;
-    float: right;
-    margin-top: 0.5%;
-    font-size: 2em;
-}
-
-.compose {
-    background: #00a087;
-    background-image: -webkit-linear-gradient(top, #00a087, #489ba6);
-    background-image: -moz-linear-gradient(top, #00a087, #489ba6);
-    background-image: -ms-linear-gradient(top, #00a087, #489ba6);
-    background-image: -o-linear-gradient(top, #00a087, #489ba6);
-    background-image: linear-gradient(to bottom, #00a087, #489ba6);
-    -webkit-border-radius: 20;
-    -moz-border-radius: 20;
-    border-radius: 20px;
-    font-family: Arial;
-    color: #ffffff;
-    font-size: 32px;
-    padding: 16px 29px 14px 20px;
-    text-decoration: none;
-}
-
-.compose:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
+.fa {
+    font-family: 'Roboto Condensed', sans-serif;
 }
