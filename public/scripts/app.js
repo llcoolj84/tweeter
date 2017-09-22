@@ -30,6 +30,7 @@ $(function() {
     })
 
     //slide down toggle to add compose tweet container
+
     $('.compose').on("click", function(event) {
         event.preventDefault()
         if ($(".new-tweet").is(":hidden")) {
@@ -72,7 +73,6 @@ $(function() {
     }
 
 
-
     //get request to load tweets into memory ready to be rendered
 
     function loadTweets() {
@@ -106,6 +106,5 @@ $(function() {
     }
 
     renderTweets();
-
 
 });
