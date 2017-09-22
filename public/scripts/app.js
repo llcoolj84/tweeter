@@ -29,6 +29,18 @@ $(function() {
         }
     })
 
+    //slide down toggle to add compose tweet container
+    $('.compose').on("click", function(event) {
+        event.preventDefault()
+        if ($(".new-tweet").is(":hidden")) {
+            $(".new-tweet").slideDown("slow");
+            //focus on that text area
+            $('#tweet-input').focus();
+        } else {
+            $(".new-tweet").slideUp("slow");
+        }
+    });
+
     //jquery create new tweet element
 
     function createTweetElement(tweet) {
@@ -59,14 +71,7 @@ $(function() {
 
     }
 
-    // render tweets and prepend them in tweet's container
 
-    function renderTweets(tweets) {
-        tweets.forEach(function(eachT) {
-            let $tweet = createTweetElement(eachT);
-            $('#tweets-container').prepend($tweet);
-        });
-    }
 
     //get request to load tweets into memory ready to be rendered
 
@@ -77,25 +82,30 @@ $(function() {
             success: function(data) {
                 var arr = data[data.length - 1];
                 var $newTweet = createTweetElement(arr);
-                $('#container').prepend($newTweet);
-                renderTweets(data);
+                $('#tweets-container').prepend($newTweet);
             }
         });
     }
 
-    //slide down toggle to add compose tweet container
-    $('.compose').on("click", function(event) {
-        event.preventDefault()
-        if ($(".new-tweet").is(":hidden")) {
-            $(".new-tweet").slideDown("slow");
-            //focus on that text area
-            $('#tweet-input').focus();
-        } else {
-            $(".new-tweet").slideUp("slow");
-        }
-    });
+    // render tweets and prepend them in tweet's container
 
-    loadTweets();
+    function renderTweets() {
 
-    renderTweets(tweetData);
+        console.log('HERE!');
+        $.ajax({
+            url: '/tweets',
+            method: 'GET',
+            success: function(tweets) {
+                tweets.forEach(function(eachT) {
+                    let $tweet = createTweetElement(eachT);
+                    $('#tweets-container').prepend($tweet);
+
+                })
+            }
+        });
+    }
+
+    renderTweets();
+
+
 });

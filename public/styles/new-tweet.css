@@ -57,7 +57,7 @@ input {
 .user-handle {
 
     float: right;
-    margin-top: -13%;
+    margin-top: -11%;
     display: inline-block;
     border-radius: 5px;
     margin-left: 70%;
@@ -79,20 +79,23 @@ input {
     text-align: justify;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     word-wrap: break-word;
+    font-size: 1.3em;
 }
 
 .tweet h1 {
 
-    margin-top: -12%;
-    margin-right: 25%;
+    margin-top: -10%;
+    padding-left: 18%;
     font-size: 1.6em;
 }
 
 .tweet-timestamp {
 
     display: inline-block;
-    margin-left: -45%;
+    /*margin-left: -45%;*/
 }
 
 .tweet:hover .tweet-actions {
@@ -102,15 +105,16 @@ input {
 
 .tweet-actions {
     float: right;
+    padding-top: 3px;
     color: #00a087;
     opacity: 0;
     transition: opacity 0.2s linear;
 }
 
 .tweet-actions i {
-
+    padding-top: .5em;
     padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-right: 1em;
 }
 
 .tweet-header {
