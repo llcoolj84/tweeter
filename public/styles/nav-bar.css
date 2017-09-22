@@ -5,14 +5,14 @@
     height: 90px;
     width: 100%;
     color: #e8fdff;
-    padding-left: 1em;
+    padding-left: 2em;
     padding-right: 2em;
     z-index: 999;
 }
 
 #nav-bar .logo {
-    height: 85px;
-    width: 125px;
+    height: 100px;
+    width: 280px;
     float: left;
 }
 
