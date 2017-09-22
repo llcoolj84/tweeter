@@ -1,17 +1,18 @@
 $(function() {
 
-    //form validation and post function when "tweet" button pressed
+    //form validation (counter) and post function when "tweet" button pressed
+    //serialize input into string obj NOT JSON
 
-    $("form").submit(function(event) { //serialize input into string obj NOT JSON
+    $("form").submit(function(event) {
 
         event.preventDefault();
 
-        let x;
-        x = $("#tweet-input").val().length;
-        if (x === 0) {
+        let count;
+        count = $("#tweet-input").val().length;
+        if (count === 0) {
             alert("Can not post blank tweets");
         }
-        if (x > 140) {
+        if (count > 140) {
             alert("Can't submit a tweet longer than 140 characters")
         } else {
             let tweetString = $("form").serialize();
@@ -29,7 +30,7 @@ $(function() {
         }
     })
 
-    //slide down toggle to add compose tweet container
+    //slide down toggle response "button" click to add compose tweet container
 
     $('.button').on("click", function(event) {
         event.preventDefault()
@@ -42,7 +43,7 @@ $(function() {
         }
     });
 
-    //jquery create new tweet element
+    //jquery to create new tweet element
 
     function createTweetElement(tweet) {
 

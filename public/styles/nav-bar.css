@@ -1,6 +1,5 @@
 #nav-bar {
     position: fixed;
-    /*background-color: #010f57;*/
     background: linear-gradient(to right, #33ccff 0%, #0099ff 100%);
     height: 90px;
     width: 100%;
@@ -22,6 +21,9 @@
     font-size: 2em;
     padding-left: 10px;
 }
+
+
+/*compose button text*/
 
 .fa {
     font-family: 'Roboto Condensed', sans-serif;

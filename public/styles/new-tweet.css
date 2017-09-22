@@ -43,6 +43,11 @@ input {
     border: 2px solid #0099ff;
 }
 
+
+
+
+/*all tweets css */
+
 .tweet {
     margin-top: 2em;
     overflow: hidden;
@@ -133,9 +138,4 @@ input {
 .tweet-footer {
     border-top: .5px solid grey;
     padding: 0.5em;
-}
-
-#status-area .flash_message {
-    padding: 5px;
-    color: green;
 }

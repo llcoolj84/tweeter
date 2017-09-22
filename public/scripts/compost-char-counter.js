@@ -1,3 +1,4 @@
+   // count characters function
    $(document).ready(function() {
 
        $('textarea').keyup(function() {
